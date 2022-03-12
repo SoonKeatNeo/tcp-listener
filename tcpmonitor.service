@@ -1,0 +1,11 @@
+[Unit]
+Description=TCP Monitor
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /etc/listener.py 3103
+
+[Install]
+WantedBy=multi-user.target
